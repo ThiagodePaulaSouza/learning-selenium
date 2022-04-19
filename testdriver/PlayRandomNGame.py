@@ -5,7 +5,6 @@ navegador = webdriver.Chrome(executable_path='D:\\chromeDriver\\chromedriver.exe
 url = 'https://curso-python-selenium.netlify.app/exercicio_02.html'
 navegador.get(url)
 sleep(5)
-# logica 1
 # Click on "clique aqui" enquanto o numero esperado for false
 # if expected number is true stop click on "clique aqui"
 a = navegador.find_element_by_tag_name('a')
@@ -18,6 +17,3 @@ while True:
     receive = navegador.find_elements_by_tag_name('p')
     if receive[-1].text == f"Você ganhou: {expected}":
         break
-
-# logica 2
-# se expected number is false click on clique aqui se n pare
